@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+    <title>Comissão Técnica - Point FC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="point.jpg.jpg" type="image/png"> <!-- Ícone na aba -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #4B0082;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #800080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+         h2 {
+            text-align: center;
+            color: #800080;
+        }
+        h1 {
+           text-align: center;
+           color: f;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .membro {
+            background: #f0f0f0;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #800080;
+            border-radius: 5px;
+        }
+
+        a.voltar {
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+            text-decoration: none;
+            color: #800080;
+            font-weight: bold;
+        }
+
+        a.voltar:hover {
+            text-decoration: underline;
+        }
+
+        .menu-hamburguer {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-hamburguer span {
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Comissão Técnica</h1>
+    </header>
+
+    <div class="container">
+        <div class="membro">
+            <h2>Vinicius Mendes</h2>
+            <p><strong>Função:</strong> Preparador Físico</p>
+            <p><strong>Experiência:</strong> Atuação em clubes de base e preparação de atletas de alto rendimento.</p>
+            <p><strong>Formação:</strong> Fisioterapia e Pós-graduação em Treinamento Desportivo</p>
+        </div>
+
+        <a href="index.html" class="voltar"> Voltar para o site</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Point Fc. Todos os direitos reservados.</p>
+    </footer>
+
+</body><script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    if (!nav) {
+      // Se não existir uma tag <nav>, você pode criar uma ou adaptar conforme seu layout
+      alert('Menu não implementado ainda!');
+      return;
+    }
+    nav.classList.toggle('ativo');
+  }
+</script>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Elenco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ícone da aba -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Estilos -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #800080;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #7c139c;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            background-color: white;
+            color: #800080;
+            border: 2px solid #800080;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #800080;
+            color: white;
+        }
+
+        .menu-hamburguer {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-hamburguer span {
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .elenco, .categorias {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .elenco li, .categorias li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #800080;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                margin-top: 60px;
+            }
+
+            nav.ativo {
+                display: flex;
+            }
+
+            .menu-hamburguer {
+                display: flex;
+            }
+        }
+        header img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="point.jpg.jpg" alt="Logo do Point Fc" style="width: 120px;">
+        <h1>Elenco do Point Fc</h1>
+
+        <!-- Botão menu hambúrguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <a href="index.html" class="botao">Início</a>
+            <a href="comissao.html" class="botao">Comissão Técnica</a>
+            <a href="jogos.html" class="botao">Jogos</a>
+            <a href="galeria.html" class="botao">Galeria</a>
+        </nav>
+    </header>
+
+    <section id="elenco">
+        <input type="text" id="pesquisa" placeholder="Pesquisar jogador ou posição..." style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+
+        <h2>Elenco Atual</h2>
+        <ul class="elenco">
+            <li>Jogador 1 - Posição: Atacante</li>
+            <li>Jogador 2 - Posição: Meio-campo</li>
+            <li>Jogador 3 - Posição: Goleiro</li>
+            <!-- Adicione mais jogadores conforme necessário -->
+        </ul>
+    </section>
+
+    
+            <!-- Adicione mais categorias conforme necessário -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Point Fc. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do menu responsivo -->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('ativo');
+        }
+    </script>
+</body>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    if (!nav) {
+      // Se não existir uma tag <nav>, você pode criar uma ou adaptar conforme seu layout
+      alert('Menu não implementado ainda!');
+      return;
+    }
+    nav.classList.toggle('ativo');
+  }
+</script>
+<script>
+    // Filtro da barra de pesquisa
+    document.getElementById("pesquisa").addEventListener("input", function () {
+        const termo = this.value.toLowerCase();
+        const jogadores = document.querySelectorAll(".elenco li");
+
+        jogadores.forEach(function (jogador) {
+            const texto = jogador.textContent.toLowerCase();
+            if (texto.includes(termo)) {
+                jogador.style.display = "block";
+            } else {
+                jogador.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</html>
