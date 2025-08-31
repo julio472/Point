@@ -1,0 +1,195 @@
+[index.html](https://github.com/user-attachments/files/22068799/index.html)
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Point Fc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="point.jpg.jpg" type="image/png"> <!-- Ícone na aba -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #4B0082;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #800080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: white;
+            color: #800080;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #800080;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .botao:hover {
+            background-color: #8800a3;
+            color: white;
+            box-shadow: 0 6px 10px rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #800080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: rgb(135, 15, 168);
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        li {
+            background: #ffffff;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 5px solid #800080;
+            border-radius: 4px;
+        }
+
+        .contato {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contato p {
+            margin: 5px 0;
+        }
+
+        .contato img {
+            vertical-align: middle;
+        }
+        .menu-hamburguer {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-hamburguer span {
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .menu-hamburguer {
+                display: flex;
+            }
+
+        
+    #icone-point {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    #icone-point img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #icone-point:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+
+</head>
+<body>
+    <header>
+    
+        <img src="point.jpg.jpg" alt="Escudo Point Futsal Clube">
+        <h1>Point Fc</h1>
+        
+        <nav>
+            <a href="jogos.html" class="botao">Jogos</a>
+            <a href="elenco.html" class="botao">Elenco</a>
+            <a href="contato.html" class="botao">Contato</a>
+            <a href="modalidade.html" class="botao">Modalidades</a>
+            <a href="comissao.html" class="botao">Comissão</a>
+            <a href="galeria.html" class="botao">Galeria</a>
+        </nav>
+    </header>
+        <section>
+        <h2>Bem-vindo à Point FC</h2>
+        <strong><p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            O Point Futebol Clube é mais do que um time, é uma família apaixonada pelo esporte! Atuamos nas modalidades de Futsal, Minicampo e Campo com dedicação, espírito de equipe e muita garra. Explore nosso site e conheça nosso elenco, jogos, comissão técnica e muito mais.
+        </p></strong>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="PointFc.jpg" alt="Foto da equipe do Point FC" style="max-width: 90%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Point FC. Todos os direitos reservados.</p>
+        <p>Desenvolvido por sua equipe de mídia</p>
+    </footer>
+</body>
+</html>
+
+
